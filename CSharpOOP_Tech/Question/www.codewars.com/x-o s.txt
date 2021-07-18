@@ -1,0 +1,8 @@
+﻿
+  public static bool XO(string input) => findCountChar('x', input) == findCountChar('o', input);
+  
+  private static int findCountChar(char myChar,string input)    
+  {
+      input = input.ToLower();
+      return input.Count(f => (f == myChar));
+  }

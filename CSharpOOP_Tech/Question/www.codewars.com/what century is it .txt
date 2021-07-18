@@ -1,0 +1,11 @@
+﻿public static string WhatCentury(string year)
+{
+    double centuryD = int.Parse(year) / 100d + 1;
+    int century = int.Parse(Math.Ceiling(centuryD).ToString());
+    return century + GetWord(century);
+}
+private static string GetWord(int century)
+{
+    string[] rules = new string[4] { "st", "nd", "rd", "th" };
+    return (new int[] { 11, 12, 13 }).Any(c => c == century % 100) ? rules[3] : century % 10 == 1 ? rules[0] : century % 10 == 2 ? rules[1] : century % 10 == 3 ? rules[2] : rules[3];
+}

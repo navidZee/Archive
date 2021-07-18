@@ -1,0 +1,23 @@
+﻿private static bool IsEven(int num) => num % 2 == 0;
+private static int GetPositionOfDiff(bool isEven, List<int> list) => list.FindIndex(number => IsEven(number) != isEven) + 1;
+
+public static int Test(string numbers)
+{
+    var list = numbers.Split(" ").Select(f => int.Parse(f)).ToList();
+
+    bool[] arrDivisioned = new bool[3] { IsEven(list[0]),
+                                                 IsEven(list[1]),
+                                                 IsEven(list[2]) };
+    bool arrStatus = true;
+
+    arrStatus = arrDivisioned[0];
+
+    if (arrDivisioned[0] == arrDivisioned[1])
+        arrStatus = arrDivisioned[0];
+    else if (arrDivisioned[1] == arrDivisioned[2])
+        arrStatus = arrDivisioned[1];
+    else
+        arrStatus = arrDivisioned[0];
+
+    return GetPositionOfDiff(arrStatus, list);
+}

@@ -1,0 +1,9 @@
+﻿public static bool IsPangram(string str)
+{
+    var res = true;
+    for (char letter = 'a'; letter <= 'z' && res; letter++)
+    {
+        res = str.ToLower().Any(f => f == letter);
+    }
+    return res;
+}

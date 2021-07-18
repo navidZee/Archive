@@ -1,0 +1,9 @@
+﻿public static int SquareDigits(int n)
+{
+    string res = "";
+    foreach (char digit in n.ToString())
+    {
+        res += Math.Pow(int.Parse(digit.ToString()), 2);
+    }
+    return int.Parse(res);
+}

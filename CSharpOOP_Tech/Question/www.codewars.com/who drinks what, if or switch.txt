@@ -1,0 +1,5 @@
+﻿public static string PeopleWithAgeDrink(int old)
+{
+    string[] rules = new string[4] { "drink toddy", "drink coke", "drink beer", "drink whisky" };
+    return old < 14 ? rules[0] : old < 18 ? rules[1] : old < 21 ? rules[2] : rules[3];
+}

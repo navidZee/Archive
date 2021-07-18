@@ -1,0 +1,20 @@
+﻿public static string[] TowerBuilder(int nFloors)
+{
+    string[] towers = new string[nFloors];
+    int columnCount = (nFloors * 2 - 1);
+    int middle = Convert.ToInt32(Math.Ceiling((double)(columnCount / 2d)));
+    for (int i = 0; i < towers.Length; i++) // rows count
+    {
+        string currentStr = string.Empty;
+        for (int j = 0; j < columnCount; j++)
+        {
+            var left = Enumerable.Range(middle, i).ToArray();
+            var right = Enumerable.Range((middle - 1) - i, i).ToArray();
+            currentStr +=
+                j == (middle - 1) || left.Any(c => c == j) || right.Any(c => c == j)
+                ? "*" : " ";
+        }
+        towers[i] = currentStr;
+    }
+    return towers;
+}

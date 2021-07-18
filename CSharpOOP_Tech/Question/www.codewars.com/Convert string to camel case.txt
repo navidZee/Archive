@@ -1,0 +1,11 @@
+﻿public static string ToCamelCase(string str)
+{
+    if (str.Length > 0)
+    {
+        string temp = str;
+        TextInfo txtInfo = new CultureInfo("en-us", false).TextInfo;
+        temp = txtInfo.ToTitleCase(str).Replace('_', ' ').Replace('-', ' ').Replace(" ", String.Empty);
+        return str[0] + temp.Remove(0, 1);
+    }
+    else return str;
+}

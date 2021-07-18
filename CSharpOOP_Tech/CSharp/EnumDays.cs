@@ -14,7 +14,7 @@ namespace CSharpOOP_Tech.CSharp
     }
     class EnumDays
     {
-        static void Main(string[] args)
+        static void EnumDaysMain(string[] args)
         {
             Days MeetingDay = Days.Saturday | Days.Tuesday;
             System.Console.WriteLine("Meeting Days: {0}", MeetingDay);

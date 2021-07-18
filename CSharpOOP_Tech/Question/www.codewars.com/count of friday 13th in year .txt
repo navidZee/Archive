@@ -1,0 +1,9 @@
+﻿public static int UnluckyDays(int year)
+{
+    var unlucky = 0;
+    for (int month = 1; month <= 12; month++)
+    {
+        unlucky += new DateTime(year, month, 13).DayOfWeek == DayOfWeek.Friday ? 1 : 0;
+    }
+    return unlucky;
+}

@@ -1,0 +1,6 @@
+﻿public static string HighAndLow(string numbers)
+{
+    var arraysNumbers = numbers.Split(" ");
+    return string.Format("{0} {1}", arraysNumbers.Max(c => int.Parse(c)),
+                                    arraysNumbers.Min(c => int.Parse(c)));
+}

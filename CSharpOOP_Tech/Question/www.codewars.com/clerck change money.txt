@@ -1,0 +1,45 @@
+﻿public static string Tickets(int[] peopleInLine)
+{
+    string res = "YES";
+
+    Dictionary<int, int> monies = new Dictionary<int, int>();
+    monies.Add(100, 0);
+    monies.Add(50, 0);
+    monies.Add(25, 0);
+
+    for (int index = 0; index < peopleInLine.Length && res == "YES"; index++)
+    {
+        var currentPerson = peopleInLine[index];
+        if (currentPerson > 25)
+        {
+            if (currentPerson == 50)
+            {
+                if (monies[25] == 0)
+                    res = "NO";
+                else
+                {
+                    monies[25]--;
+                    monies[50]++;
+                }
+            }
+            else // it's 100
+            {
+                if (monies[50] > 0 && monies[25] > 0)
+                {
+                    monies[50]--;
+                    monies[25]--;
+                    monies[100]++;
+                }
+                else if (monies[25] >= 3)
+                {
+                    monies[25] -= 3;
+                    monies[100]++;
+                }
+                else res = "NO";
+            }
+        }
+        else monies[25]++;
+    }
+
+    return res;
+}

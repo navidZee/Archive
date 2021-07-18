@@ -1,0 +1,11 @@
+﻿private static long DoSum(long n)
+{
+    var nString = n.ToString();
+
+    if (nString.Length == 1) return n;
+
+    var sum = nString.Select(f => long.Parse(f.ToString())).Sum(f => f);
+    return DoSum(sum);
+}
+
+public static long DigitalRoot(long n) => DoSum(n);

@@ -4,7 +4,7 @@ namespace CSharpOOP_Tech.CSharp
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void MyIndexerMain(string[] args)
         {
             CreateIntegerIndex oIndex = new CreateIntegerIndex();
 

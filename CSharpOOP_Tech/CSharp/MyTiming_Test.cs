@@ -6,7 +6,7 @@ namespace CSharpOOP_Tech.CSharp
 {
     public class MyTiming_Test
     {
-        static void Main(string[] args)
+        static void MyTiming_TestMain(string[] args)
         {
             DateTime starTime;
             TimeSpan duration;

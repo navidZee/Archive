@@ -2,7 +2,7 @@ namespace CSharpOOP_Tech.CSharp
 {
     public class MySwap
     {
-        static void Main(string[] args)
+        static void MySwapMain(string[] args)
         {
             CreateSwapTets.Swap1(1, 2);
             CreateSwapTets.Swap2("Navid", "Mamad");

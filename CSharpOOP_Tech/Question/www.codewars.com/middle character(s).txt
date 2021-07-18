@@ -1,0 +1,10 @@
+﻿public static string GetMiddle(string s)
+{
+    int middelIndex = (int)Math.Ceiling((double)s.Length / 2) - 1;
+    string res = (s[middelIndex]).ToString();
+
+    if (s.Length % 2 == 0)
+        res += (s[middelIndex + 1]).ToString();
+
+    return res;
+}

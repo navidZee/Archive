@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Question\www.codewars.com\DataStructure\" />
+    <Compile Remove="Question\www.codewars.com\DataStructure\**" />
+    <EmbeddedResource Remove="Question\www.codewars.com\DataStructure\**" />
+    <None Remove="Question\www.codewars.com\DataStructure\**" />
   </ItemGroup>
 
 </Project>

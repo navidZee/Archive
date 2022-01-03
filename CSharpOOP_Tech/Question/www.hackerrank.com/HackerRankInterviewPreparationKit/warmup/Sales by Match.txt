@@ -1,0 +1,14 @@
+﻿static int SockMerchant(int n, List<int> ar)
+{
+   var ar2 = new List<int>();
+
+   for (int index = 0; index < ar.Count; index++)
+   {
+       var countNeed = ar2.Count(d => d == ar[index]) * 2 + 2;
+
+       if (ar.Count(d => d == ar[index]) >= countNeed)
+           ar2.Add(ar[index]);
+   }
+
+   return ar2.Count;
+}

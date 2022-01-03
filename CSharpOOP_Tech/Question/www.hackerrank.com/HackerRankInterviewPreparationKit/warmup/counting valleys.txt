@@ -1,0 +1,15 @@
+﻿public static int countingValleys(int steps, string path)
+{
+    int count = 0;
+    int currentPosition = 0;
+
+    foreach (var word in path)
+    {
+        bool isDown = word == 'D';
+        currentPosition += isDown ? -1 : 1;
+
+        if (isDown && currentPosition == -1) count++;
+    }
+
+    return count;
+}

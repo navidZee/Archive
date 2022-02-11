@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 
-namespace CSharpOOP_Tech.CSharp.DesignPattern.Creational
+namespace CSharpOOP_Tech.CSharp.DesignPattern.Creational.Builder
 {
-    public class Builder
+    public class BuilderPattern
     {
         void Main()
         {

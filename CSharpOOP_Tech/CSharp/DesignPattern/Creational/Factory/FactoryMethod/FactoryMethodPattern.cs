@@ -14,7 +14,6 @@ namespace CSharpOOP_Tech.CSharp.DesignPattern.Creational.FactoryMethod
         }
     }
 
-
     public class MyButton
     {
         public MyButton(string title, string color) => (Title, Color) = (title, color);

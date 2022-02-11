@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharpOOP_Tech.CSharp.DesignPattern.Creational
+namespace CSharpOOP_Tech.CSharp.DesignPattern.Creational.Builder
 {
     public interface IKeyValueGenerator
     {

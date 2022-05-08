@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="PracticalAlgorithm\" />
+    <Folder Include="PracticalAlgorithm\Search\BFS\" />
   </ItemGroup>
 
 </Project>

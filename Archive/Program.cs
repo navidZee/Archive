@@ -7,6 +7,7 @@ namespace CSharpOOP_Tech
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("TESTTT 123");
         }
     }
 }

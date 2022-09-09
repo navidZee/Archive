@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CSharp\DesignPattern\Composite\" />
     <Folder Include="DataStructure\LinkedList\" />
     <Folder Include="PracticalAlgorithm\Search\BFS\" />
   </ItemGroup>

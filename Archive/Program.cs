@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Immutable;
-
-namespace CSharpOOP_Tech
+﻿namespace CSharpOOP_Tech
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("TESTTT 123");
         }
     }
 }
